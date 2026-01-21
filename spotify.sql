@@ -45,9 +45,15 @@ CREATE TABLE tb_musica (
 id_musica INT AUTO_INCREMENT PRIMARY KEY,
 titulo VARCHAR(100) NOT NULL,
 duracao TIME NOT NULL,
+id_artista INT NOT NULL,
 id_album INT NOT NULL,
 
 CONSTRAINT fk_musica_album
+FOREIGN KEY (id_album)
+REFERENCES tb_album(id_album)
+ON DELETE CASCADE
+
+  CONSTRAINT fk_musica_album
 FOREIGN KEY (id_album)
 REFERENCES tb_album(id_album)
 ON DELETE CASCADE
