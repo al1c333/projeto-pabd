@@ -1,4 +1,13 @@
 
+CREATE TABLE tb_usuario (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+email VARCHAR(255) NOT NULL UNIQUE,
+senha VARCHAR(255) NOT NULL,
+data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+plano_ass VARCHAR(50)
+);
+
 CREATE TABLE tb_artista (
 id_artista INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(255) NOT NULL,       
@@ -10,6 +19,7 @@ id_album INT AUTO_INCREMENT PRIMARY KEY,
 titulo VARCHAR(100) NOT NULL,
 ano_lancamento YEAR NOT NULL,
 id_artista INT NOT NULL,
+);
 
 CONSTRAINT fk_album_artista
 FOREIGN KEY (id_artista)
@@ -64,3 +74,13 @@ VALUES ('Sofia', '00:03:45', 1);
 
 INSERT INTO tb_musica (titulo, duracao, id_album)
 VALUES ('Casual', '00:03:45', 2);
+
+CREATE TABLE playlist_musica (
+id_playlist_musica INT AUTO_INCREMENT PRIMARY KEY,
+id_playlist INT NOT NULL,
+id_musica INT NOT NULL,
+ordem INT,
+    
+FOREIGN KEY (id_playlist) REFERENCES playlist(id_playlist),
+FOREIGN KEY (id_musica) REFERENCES musica(id)
+);
