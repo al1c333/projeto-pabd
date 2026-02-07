@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <title>Cadastrar Artista</title>
+</head>
+<body>
+
+    <h1>Cadastrar Artista</h1>
+
+    <form action="/artistas/add" method="post">
+        <label>Nome do artista:</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <br>
+    <a href="/artistas/listar">Voltar para lista</a>
+
+</body>
+</html>
