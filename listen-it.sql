@@ -99,6 +99,25 @@ INSERT INTO `tb_playlist_musica` (`id_playlist`, `id_musica`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `tb_album_musica`
+--
+
+CREATE TABLE `tb_album_musica` (
+  `id_album` int(11) NOT NULL,
+  `id_musica` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tb_album_musica`
+--
+
+INSERT INTO `tb_album_musica` (`id_album`, `id_musica`) VALUES
+(1, 1),
+(1, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `tb_usuario`
 --
 
