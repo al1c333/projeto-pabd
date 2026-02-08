@@ -1,0 +1,275 @@
+/* ===== ESTILOS GLOBAIS PARA O PROJETO LISTENIT ===== */
+
+/* 1. ESTILOS GERAIS DO BODY */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 2. ESTILOS PARA TÍTULOS */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+h1.display-6 {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* 3. ESTILOS PARA TABELAS (aplica a qualquer tabela) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #e8f4fc;
+    transition: background-color 0.3s;
+}
+
+table[border="1"] {
+    border: none;
+}
+
+table[border="1"] th,
+table[border="1"] td {
+    border: 1px solid #ddd;
+}
+
+/* 4. ESTILOS PARA FORMULÁRIOS */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+}
+
+label {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* 5. ESTILOS PARA BOTÕES (todas as classes .btn) */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    margin: 5px;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #27ae60, #219653);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2980b9, #1c5d87);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+
+/* 6. ESTILOS PARA LINKS */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* 7. ESTILOS PARA LISTAS (já existentes nos seus arquivos) */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+ul li a:hover {
+    background: #2980b9;
+    text-decoration: none;
+}
+
+/* 8. ESTILOS PARA CONTAINERS E ESPAÇAMENTO */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mt-4 {
+    margin-top: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 30px;
+}
+
+/* 9. ESTILOS PARA O SELECT2 (usado no musicas-add.ejs) */
+.select2-container .select2-selection--single,
+.select2-container .select2-selection--multiple {
+    border: 2px solid #ddd !important;
+    border-radius: 6px !important;
+    padding: 5px !important;
+    min-height: 45px !important;
+}
+
+.select2-container .select2-selection--single:focus,
+.select2-container .select2-selection--multiple:focus {
+    border-color: #3498db !important;
+    outline: none !important;
+}
+
+.select2-results__option--highlighted {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+/* 10. ESTILOS PARA CARDS DO BOOTSTRAP */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* 11. ESTILOS ESPECÍFICOS PARA A PÁGINA INICIAL */
+body > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+body > ul li a {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+body > ul li a:hover {
+    background: linear-gradient(135deg, #2980b9, #1c5d87);
+}
+
+/* 12. RESPONSIVIDADE */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    table th,
+    table td {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    body > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
