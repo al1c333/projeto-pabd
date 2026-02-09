@@ -96,24 +96,6 @@ INSERT INTO `tb_playlist_musica` (`id_playlist`, `id_musica`) VALUES
 (1, 1),
 (1, 2);
 
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `tb_album_musica`
---
-
-CREATE TABLE `tb_album_musica` (
-  `id_album` int(11) NOT NULL,
-  `id_musica` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `tb_album_musica`
---
-
-INSERT INTO `tb_album_musica` (`id_album`, `id_musica`) VALUES
-(1, 1),
-(1, 2);
 
 -- --------------------------------------------------------
 
@@ -246,4 +228,8 @@ ALTER TABLE `tb_playlist`
 ALTER TABLE `tb_playlist_musica`
   ADD CONSTRAINT `fk_pm_musica` FOREIGN KEY (`id_musica`) REFERENCES `tb_musica` (`id_musica`) ON DELETE CASCADE,
   ADD CONSTRAINT `fk_pm_playlist` FOREIGN KEY (`id_playlist`) REFERENCES `tb_playlist` (`id_playlist`) ON DELETE CASCADE;
+
+ALTER TABLE tb_usuario
+MODIFY plano_ass ENUM('Free', 'Premium', 'Family') NOT NULL DEFAULT 'Free';
+
 COMMIT;
